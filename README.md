@@ -40,9 +40,9 @@ Kru-components expose a hook named `components:dirs` enabling you to easily exte
 `kru-components` is configured with `kru` prefix. Below is how you'd use them in the template area of your Nuxt components.
 
 ```html
-<kru-counter :increase-by="10" class="mx-auto"> </kru-counter>
+<kru-counter :increase-by="10"> </kru-counter>
 
 <!-- OR -->
 
-<KruCounter :increase-by="2" class="mx-auto"></KruCounter>
+<KruCounter :increase-by="2"></KruCounter>
 ```
