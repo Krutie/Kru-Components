@@ -1,48 +1,56 @@
 # kru-components
 
-Basic third-party library component to demonstrate @nuxt/components Nuxt module.
-
-## Project setup - Clone and install dependencies
-
-```
-npm install
-```
-
-### Make this package available for your local projects
-
-```
-npm link
-```
+Basic third-party library component to demonstrate [@nuxt/components](https://github.com/nuxt/components) Nuxt module.
 
 ## Usage
 
 ### Include Kru Components into your Nuxt project
 
+Using npm:
+
 ```
-npm link kru-components
+npm i kru-components
 ```
 
-### Configure `kru-components` in your Nuxt project
+Using yarn:
 
-Kru-components expose a hook named `components:dirs` enabling you to easily extend its `~/componets/` directory without having to update module options (of @nuxt/components) in our `nuxt.config.js`.
+```
+yarn add kru-components
+```
 
-```javascript
-// nuxt.config.js
+### With Nuxt.js
+
+See [examples/with-nuxt](./examples/with-nuxt)
+
+Kru-components is using [@nuxt/components](https://github.com/nuxt/components) to efficently lazy import components by usage.
+
+**Important:** Ensure using nuxt >= 2.13.0 and `components` option is set from `nuxt.config`
+
+```js
+export default {
+  components: true,
   buildModules: [
-    // Make sure @nuxt/components is available
-    "@nuxt/components",
-
-    // Use Kru-components as Nuxt module
-    "kru-components/src/nuxt",
+    "kru-components/nuxt",
   ],
+}
 ```
 
 `kru-components` is configured with `kru` prefix. Below is how you'd use them in the template area of your Nuxt components.
 
-```html
-<kru-counter :increase-by="10"> </kru-counter>
-
-<!-- OR -->
-
-<KruCounter :increase-by="2"></KruCounter>
+```vue
+<template>
+  <kru-counter :increase-by="10"> </kru-counter>
+  <!-- OR -->
+  <KruCounter :increase-by="2"></KruCounter>
+</template>
 ```
+
+## With Vue-CLI
+
+See [examples/with-vue](./examples/with-vue)
+
+## Development
+
+- Clone this repository
+- Run `yarn install`
+- Run `yarn dev`
