@@ -1,6 +1,6 @@
 {
   "name": "kru-components",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "repository": "https://github.com/Krutie/Kru-Components",
   "license": "MIT",
   "files": [
@@ -12,6 +12,6 @@
     "dev": "yarn nuxt dev examples/with-nuxt"
   },
   "devDependencies": {
-    "nuxt": "^2.13.1"
+    "nuxt": "^2.14.1"
   }
 }
